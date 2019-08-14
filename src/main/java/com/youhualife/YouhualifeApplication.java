@@ -1,12 +1,15 @@
 package com.youhualife;
 import com.youhualife.datahandle.management.HandleWork;
-import com.youhualife.datahandle.service.IDaDahService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.file.Files;
+import java.util.UUID;
 
 /**
  * @author ZQ
@@ -25,6 +28,10 @@ public class YouhualifeApplication  implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+//        System.out.println(UUID.randomUUID());
+//        File source = new File("E://1.png");
+//        FileOutputStream target = new FileOutputStream("E://abc");
+//        Files.copy(source.toPath(),target);
         work.Handle();
     }
 }
